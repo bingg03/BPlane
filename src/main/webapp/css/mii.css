@@ -1,0 +1,19 @@
+.container-ticket{
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 5px;
+    /* margin-bottom: 15px; */
+    
+}
+
+.post-list-ticket{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:0 40px;
+    
+}
+.card {
+    margin-bottom: 20px;
+    font-family: Poppins, Arial, sans-serif;
+    font-weight: bold;
+}	
