@@ -55,7 +55,7 @@
                                             541
                                             7665</span></a></li>
                                 <li><a href="#"><span class="icon icon-envelope"></span><span
-                                            class="text">lehuynhduc05062003@gmail.com</span></a></li>
+                                            class="text"> lehuynhduc05062003@gmail.com</span></a></li>
                             </ul>
                         </div>
                     </div>

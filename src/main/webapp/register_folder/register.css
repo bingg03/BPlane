@@ -9,10 +9,15 @@ html{
 }
 
 body{
-    background-image: url(image_register/register.jpg);
-    background-size: 110%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-color: #8a8a8a;
+}
+
+.wrong-email-pw{
+    position: absolute;
+    color: rgb(195, 28, 28);
+    margin-top: 10px;
 }
 
 .clear{

@@ -14,11 +14,42 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li> -->
                     <li class="nav-item"><a href="home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="info.html" class="nav-link">My Ticket</a></li>
-                    <li class="nav-item"><a href="register.html" class="nav-link">Register</a></li>
-                    <li class="nav-item"><a href="signin.html" class="nav-link">Log in</a></li>
-                    <li class="nav-item"><a href="logout.html" class="nav-link">Log out</a></li>
-                    <li class="nav-item cta"><a href="#" class="nav-link"><span>About</span></a></li>
+                    
+                    <!--  user / admin -->
+                    <!--<c:if test="${sessionScope.acc.isUser == 1 || sessionScope.acc.isAdmin == 1}">
+                    	<li class="nav-item"><a href="myinfo.jsp" class="nav-link">My Info</a></li>
+                    </c:if>
+                    -->
+                    <c:if test="${sessionScope.acc.isUser == 1}">
+                    	<li class="nav-item"><a href="myticket.jsp" class="nav-link">My Ticket</a></li>
+                    </c:if>
+                    <c:if test="${sessionScope.acc.isAdmin == 1}">
+                    	<li class="nav-item"><a href="manage_user.jsp" class="nav-link">Manage Users</a></li>
+                    </c:if>
+                    <c:if test="${sessionScope.acc.isAdmin == 1}">
+                    	<li class="nav-item"><a href="manager" class="nav-link">Manage Tickets</a></li>
+                    </c:if>
+                    
+                    
+                    
+                    <c:if test="${sessionScope.acc == null}">
+                    	<li class="nav-item"><a href="register.jsp" class="nav-link">Register</a></li>
+                    </c:if>
+                    
+                    
+                    <c:if test="${sessionScope.acc == null}">
+                    	<li class="nav-item"><a href="login.jsp" class="nav-link">Log in</a></li>
+                    </c:if>
+                    
+                    <c:if test="${sessionScope.acc != null}">
+                    	<li class="nav-item"><a href="logout" class="nav-link">Log out</a></li>
+                    	<li class="nav-item cta"><a href="info" class="nav-link"><span>Hello, ${sessionScope.acc.name}</span></a></li>
+                    </c:if>
+                    
+                    
+                    <c:if test="${sessionScope.acc == null}">
+                    	<li class="nav-item cta"><a href="#" class="nav-link"><span>About</span></a></li>
+                    </c:if>
 
                 </ul>
             </div>

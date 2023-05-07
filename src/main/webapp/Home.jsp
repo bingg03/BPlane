@@ -50,13 +50,13 @@
         <div class="post-list-ticket">
             <c:forEach items="${listFlight}" var="o">
                 <div class="card">
-                    <img class="card-img-top"
-                        src="${o.img}"
+                    <img style="width: 312px; height: 200px" class="card-img-top"
+                        src="${o.image}"
                         alt="Card image cap">
                     <div class="card-body">
-                        <h4 class="card-title show_txt"><a href="" title="View Product">${o.depart}</a>
+                        <h4 class="card-title show_txt"><a href="" title="View Product">${o.dep}</a>
                             <a href="" title="View Product"> - </a>
-                            <a href="" title="View Product">${o.destination}</a>
+                            <a href="" title="View Product">${o.des}</a>
                         </h4>
 
                         <div class="row">
@@ -64,7 +64,7 @@
                                 <p class="card-text show_txt">Ngày giờ đi : </p>
                             </div>
                             <div class="col">
-                                <p class="card-text show_txt">${o.dep_dt}</p>
+                                <p class="card-text show_txt">${o.timedep}</p>
                             </div>
                         </div>
 
@@ -73,7 +73,7 @@
                                 <p class="card-text show_txt">Ngày giờ đến : </p>
                             </div>
                             <div class="col">
-                                <p class="card-text show_txt">${o.des_dt}</p>
+                                <p class="card-text show_txt">${o.timedes}</p>
                             </div>
                         </div>
 
@@ -87,14 +87,21 @@
                         </div>
 
                         <br>
+                        
+                        
                         <div class="row">
                             <div class="col">
                                 <p class="btn btn-danger btn-block">${o.cost} VNĐ</p>
                             </div>
                             <div class="col">
-                                <a href="#" class="btn btn-success btn-block">Đặt vé</a>
+                                <a href="booking?fid=${o.id}" class="btn btn-success btn-block" 
+                                  
+                                >Đặt vé</a>
                             </div>
                         </div>
+        
+                        
+                        
                     </div>
                 </div>
             </c:forEach>
@@ -114,6 +121,7 @@
             <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
                 stroke="#F96D00" />
         </svg></div>
+
 
 
     <script src="js/jquery.min.js"></script>

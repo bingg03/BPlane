@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,20 +9,27 @@
     <title>Đăng nhập</title>
     <script src="https://kit.fontawesome.com/5175756225.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="signin_folder/main_signin.css">
+   
 </head>
 <body>
     <div id="main">
+        
         <div id="header">
-            <li><a href="">Thông tin về chúng tôi</a></li>
-            <li><a href="">Đóng góp</a></li>
+            <li><a href="home">Home</a></li>
         </div>
+        
         <div id="content">
             <div class="content-signin">
+            	
                 <div class="content-signin-title">
                     <h1 class="content-signin-title-text">Đăng Nhập</h1>
                 </div>
-                <form action="">
-                    <input class="signin-submit" name="email" type="email" placeholder="Email">
+                
+                
+				
+                <form action="login">
+                	<p class="wrong-email-pw">${message}</p>
+                    <input class="signin-submit" name="useremail" type="text" placeholder="Email">
                     <div class="pw">
                        <input style="margin-bottom:20px ;" class="signin-submit" id="pass" name="password" type="password" placeholder="Mật khẩu">
                         <div id="eye">
@@ -31,7 +40,7 @@
                     <input class="signin-submit-button" type="submit" value="ĐĂNG NHẬP">
                 </form>
                 
-                <p class="login-signup">Bạn chưa có tài khoản? <a href="register.html">Đăng kí</a></p>
+                <p class="login-signup">Bạn chưa có tài khoản? <a href="register.jsp">Đăng kí</a></p>
             </div>
         </div>
     </div>

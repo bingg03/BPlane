@@ -1,109 +1,139 @@
 package entity;
 
 public class Flight {
+	
 	private int id;
-	private String depart;
-	private String destination;
-	private String dep_dt;
-	private String des_dt;
+	private String dep;
+	private String des;
+	private String timedep;
+	private String timedes;
 	private int cost;
 	private int numT;
-	private int numS;
-	private String img;
+	private String image;
 
 	public Flight() {
 
 	}
 
-	public Flight(int id, String depart, String destination, String dep_dt, String des_dt, int cost, int numT, int numS,
-			String img) {
+	
+
+	public Flight(int id, String dep, String des, String timedep, String timedes, int cost, int numT, String image) {	
 		this.id = id;
-		this.depart = depart;
-		this.destination = destination;
-		this.dep_dt = dep_dt;
-		this.des_dt = des_dt;
+		this.dep = dep;
+		this.des = des;
+		this.timedep = timedep;
+		this.timedes = timedes;
 		this.cost = cost;
 		this.numT = numT;
-		this.numS = numS;
-		this.img = img;
+		this.image = image;
 	}
+
+
 
 	public int getId() {
 		return id;
 	}
 
+
+
 	public void setId(int id) {
 		this.id = id;
 	}
 
-	public String getDepart() {
-		return depart;
+
+
+	public String getDep() {
+		return dep;
 	}
 
-	public void setDepart(String depart) {
-		this.depart = depart;
+
+
+	public void setDep(String dep) {
+		this.dep = dep;
 	}
 
-	public String getDestination() {
-		return destination;
+
+
+	public String getDes() {
+		return des;
 	}
 
-	public void setDestination(String destination) {
-		this.destination = destination;
+
+
+	public void setDes(String des) {
+		this.des = des;
 	}
 
-	public String getDep_dt() {
-		return dep_dt;
+
+
+	public String getTimedep() {
+		return timedep;
 	}
 
-	public void setDep_dt(String dep_dt) {
-		this.dep_dt = dep_dt;
+
+
+	public void setTimedep(String timedep) {
+		this.timedep = timedep;
 	}
 
-	public String getDes_dt() {
-		return des_dt;
+
+
+	public String getTimedes() {
+		return timedes;
 	}
 
-	public void setDes_dt(String des_dt) {
-		this.des_dt = des_dt;
+
+
+	public void setTimedes(String timedes) {
+		this.timedes = timedes;
 	}
+
+
 
 	public int getCost() {
 		return cost;
 	}
 
+
+
 	public void setCost(int cost) {
 		this.cost = cost;
 	}
+
+
 
 	public int getNumT() {
 		return numT;
 	}
 
+
+
 	public void setNumT(int numT) {
 		this.numT = numT;
 	}
 
-	public int getNumS() {
-		return numS;
+
+
+	public String getImage() {
+		return image;
 	}
 
-	public void setNumS(int numS) {
-		this.numS = numS;
+
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
-	public String getImg() {
-		return img;
-	}
 
-	public void setImg(String img) {
-		this.img = img;
-	}
 
 	@Override
 	public String toString() {
-		return "Flight [id=" + id + ", depart=" + depart + ", destination=" + destination + ", dep_dt=" + dep_dt
-				+ ", des_dt=" + des_dt + ", cost=" + cost + ", numT=" + numT + ", numS=" + numS + ", img=" + img + "]";
+		return "Flight [id=" + id + ", dep=" + dep + ", des=" + des + ", timedep=" + timedep + ", timedes=" + timedes
+				+ ", cost=" + cost + ", numT=" + numT + ", image=" + image + "]";
 	}
+
+
+
+	
 
 }

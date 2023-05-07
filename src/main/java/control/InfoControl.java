@@ -1,38 +1,50 @@
-
 package control;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import dao.DAO;
-import entity.Flight;
+import entity.Account;
 
-@WebServlet(name = "HomeControl", urlPatterns = {"/home"})
-public class HomeControl extends HttpServlet {
+
+@WebServlet(name = "InfoControl", urlPatterns = {"/info"})
+public class InfoControl extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
+        HttpSession session = request.getSession();
+        Account ac = (Account) session.getAttribute("acc");
+        int id = ac.getId();
+        String email = ac.getEmail();
+        String name = ac.getName();
+        int age = ac.getAge();
+        String cccd = ac.getCCCD();
+        String pass = ac.getPass();
+        int isUser = ac.getIsUser();
+        //int isAdmin = ac.getIsAdmin();
         
-        //b1 : get data from dao
-        DAO dao = new DAO();
-		List<Flight> list = dao.getListFlight();
         
-        //b2 : set data from dao
-		request.setAttribute("listFlight", list);
-		for(Flight o : list) System.out.println(o);
-		request.getRequestDispatcher("Home.jsp").forward(request, response);
-		
+        if (isUser == 1) request.setAttribute("uoa", "USER");
+        else request.setAttribute("uoa", "ADMIN");
+        
+        request.setAttribute("id", id);
+        request.setAttribute("name", name);
+        request.setAttribute("email", email);
+        request.setAttribute("cccd", cccd);
+        request.setAttribute("age", age);
+        request.setAttribute("pass", pass);
+        
+        
+        request.getRequestDispatcher("myinfo.jsp").forward(request, response);
     }
-    
+
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -40,7 +52,6 @@ public class HomeControl extends HttpServlet {
         processRequest(request, response);
     }
 
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -52,5 +63,5 @@ public class HomeControl extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
+
 }

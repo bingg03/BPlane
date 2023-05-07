@@ -2,19 +2,17 @@
 package control;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-import dao.DAO;
-import entity.Flight;
+import entity.Account;
 
-@WebServlet(name = "HomeControl", urlPatterns = {"/home"})
-public class HomeControl extends HttpServlet {
+@WebServlet(name = "GotoChangePassControl", urlPatterns = {"/gotochangepass"})
+public class GotoChangePassControl extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -22,17 +20,13 @@ public class HomeControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
         
-        //b1 : get data from dao
-        DAO dao = new DAO();
-		List<Flight> list = dao.getListFlight();
-        
-        //b2 : set data from dao
-		request.setAttribute("listFlight", list);
-		for(Flight o : list) System.out.println(o);
-		request.getRequestDispatcher("Home.jsp").forward(request, response);
-		
+        HttpSession session = request.getSession();
+        Account ac = (Account) session.getAttribute("acc");
+        String pass = ac.getPass();
+        request.setAttribute("oldpass", pass);
+        request.getRequestDispatcher("Changepass.jsp").forward(request, response);
     }
-    
+
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -52,5 +46,5 @@ public class HomeControl extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-    
+
 }

@@ -9,10 +9,16 @@ html{
 }
 
 body{
-    background-image: url(image_signin/738037.jpg);
+    background-image: url(signin-folder/image_signin/nentrang.jpg);
     background-size: 110%;
     background-repeat: no-repeat;
     background-color: #8a8a8a;
+}
+
+.wrong-email-pw{
+    position: absolute;
+    color: rgb(195, 28, 28);
+    margin-top: 10px;
 }
 
 .clear{
@@ -60,6 +66,7 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
+
 
 #content .content-signin{
     width: 30%;

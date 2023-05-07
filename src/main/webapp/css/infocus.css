@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.content{
+    background-color: white
+}
+
+.title-info-cus{
+    display: block;
+    background-color: rgb(197, 153, 153);
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.info-customer{
+    padding-top: 50px;
+    font-size: large;
+    display: block;
+    color: red;
+    padding-left: 300px;
+}
+
+.name-cus{
+    display: block;
+    margin-bottom: 30px;
+}
+
+.button-info-cus{
+    display: flex;
+  	flex-wrap: nowrap;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.button-info-cus .change-info{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 5%;
+    background-color: rgb(76, 196, 76);
+    color: white;
+    cursor: pointer;
+}
+.button-info-cus .ticcc{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 5%;
+    background-color: rgb(76, 196, 76);
+    color: white;
+    cursor: pointer;
+}
+.button-info-cus .kettt{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 5%;
+    background-color: rgb(76, 196, 76);
+    color: white;
+    cursor: pointer;
+}
+.button-info-cus .change-pw{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(225, 4, 4);
+    color: white;
+    cursor: pointer;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px 20px;
+  }
+
+.ticket-info{
+    border-collapse: separate;
+    border-spacing: 20px;
+    margin-left: 15%;
+    margin-bottom: 50px;
+    border: 1px solid gray;
+}
+
+.ticket-bought-info{
+    display: flex;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 41%;
+}
+
+.left-info-customer{
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.right-info-customer{
+    display: block;
+    width: 40%;
+    height: auto;
+}
+
+input{
+    border: none;
+}
+
+.ticket-info-title{
+    text-align: center;
+    background-color: pink;
+    color: blue;
+    font-weight: bold;
+    border: 1px double black;
+}
+
+button{
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+
+.CancelTicket{
+    position: absolute;
+    display: block;
+    width: 30%;
+    height: 30%;
+    transform: translateX(120%);
+    background-color: rgb(206, 132, 132);
+    border-radius: 10px
+}
+
+.Title-CancelTicket{
+    font-size: 27px;
+    padding-top: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Button-CancelTicket{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.Button-No{
+    margin-right: 50px;
+    background-color: rgb(22, 188, 22);
+    cursor: pointer;
+}
+
+.Button-Yes{
+    cursor: pointer;
+    padding: 0 20px;
+}
